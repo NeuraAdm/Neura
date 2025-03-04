@@ -1,2 +1,0 @@
-# Neura
-Page of Neura
