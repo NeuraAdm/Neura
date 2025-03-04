@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '/images/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +10,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <img className="h-8 w-auto" src={logo} alt="Logo Neura" />
+              <img className="h-8 w-auto" src="/Neura/images/logo.png" alt="Logo Neura" />
               <span className="ml-2 text-2xl font-bold text-white">Neura</span>
             </div>
             <div className="hidden md:ml-14 md:flex md:space-x-8">
