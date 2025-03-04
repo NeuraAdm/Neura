@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="border-t-4 border-gray-900 xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 mt-5 mxl:col-span-1">
             <div className="flex items-center">
-              <img className="h-8 w-auto" src="/images/logo.png" alt="Logo Neura" />
+              <img className="h-8 w-auto" src="../../images/logo.png" alt="Logo Neura" />
               <span className="ml-3 text-2xl font-bold text-white">Neura</span>
             </div>
             <p className="text-lg font-medium text-white">
