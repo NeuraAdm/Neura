@@ -5,10 +5,11 @@
   "type": "module",
   "homepage": "https://neuraadm.github.io/Neura/",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
@@ -32,3 +33,5 @@
     "vite": "^5.4.2"
   }
 }
+
+
