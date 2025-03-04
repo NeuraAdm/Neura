@@ -29,6 +29,11 @@ jobs:
         run: |
           ls dist
 
+      - name: Configure Git user
+        run: |
+          git config user.name "Neura"
+          git config user.email "neura.admt@gmail.com"
+
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
