@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -31,8 +34,8 @@ jobs:
 
       - name: Configure Git user
         run: |
-          git config user.name "Your Name"
-          git config user.email "your-email@example.com"
+          git config user.name "Neura"
+          git config user.email "neura.admt@gmail.com"
 
       - name: Deploy to GitHub Pages
         run: |
