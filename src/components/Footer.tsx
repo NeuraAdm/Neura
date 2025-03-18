@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import { CircleFadingPlus, Facebook, Twitter, Instagram, Youtube,  } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -30,6 +30,10 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-white">
                 <span className="sr-only">Yotube</span>
                 <Youtube className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <span className="sr-only">Mas Redes</span>
+                <CircleFadingPlus className="h-6 w-6" />
               </a>
             </div>
           </div>

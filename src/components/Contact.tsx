@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,9 +20,30 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this data to your backend
-    console.log('Formulario enviado exitosamente:', formData);
-    alert('Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+    
+    // Número de WhatsApp al que se enviará el mensaje (sin '+' y sin espacios)
+    const phoneNumber = "573043591840"; // Usa el número que aparece en tu página
+    
+    // Crear el mensaje con toda la información del formulario
+    const message = `
+  *Nuevo contacto desde la web*
+  *Nombre:* ${formData.name}
+  *Email:* ${formData.email}
+  *Teléfono:* ${formData.phone || "No proporcionado"}
+  *Empresa:* ${formData.company || "No proporcionada"}
+  *Mensaje:* ${formData.message}
+    `.trim();
+    
+    // Codificar el mensaje para la URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Crear la URL de WhatsApp
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Abrir WhatsApp en una nueva pestaña
+    window.open(whatsappURL, '_blank');
+    
+    // Reiniciar el formulario
     setFormData({
       name: '',
       email: '',

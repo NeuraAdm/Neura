@@ -5,7 +5,7 @@ const team = [
   {
     name: 'Juan Pablo Arias',
     role: 'CEO & Founder - Ingeniero de Software',
-    image: '../images/juan.jpg',
+    image: 'images/juan.jpg',
     bio: 'Juan Pablo es un ingeniero de software con más de 5 años de experiencia en desarrollo de software y liderazgo de equipos.',
     social: {
       twitter: '#',
