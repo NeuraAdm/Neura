@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -19,10 +22,22 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install gh-pages
+        run: npm install gh-pages --save-dev
+
       - name: Build
         run: npm run build
 
+      - name: Verify dist folder
+        run: |
+          ls dist
+
+      - name: Configure Git user
+        run: |
+          git config user.name "Neura"
+          git config user.email "neura.admt@gmail.com"
+
       - name: Deploy to GitHub Pages
-        run: npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/NeuraAdm/Neura.git
+          npm run deploy
