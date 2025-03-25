@@ -21,15 +21,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install gh-pages
-        run: npm install gh-pages --save-dev
-
       - name: Build
         run: npm run build
 
-      - name: Verify dist folder
+      - name: Verify build output
         run: |
-          ls dist
+          if [ ! -d "docs" ]; then
+            echo "Error: docs directory does not exist"
+            exit 1
+          fi
+          echo "Build output verified successfully"
+          ls -la docs
 
       - name: Configure Git user
         run: |
@@ -39,5 +41,4 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/NeuraAdm/Neura.git
-          npx gh-pages -d dist --no-history 
-          npm run deploy
+          npx gh-pages -d docs --no-history
