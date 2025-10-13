@@ -1,27 +1,37 @@
-import React from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
+import AnimatedBackground from './components/AnimatedBackground';
+import SEOHead from './components/SEOHead';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Services from './components/Services';
-import Products from './components/Products';
+import Services from './components/ServicesNew';
+import Products from './components/ProductsNew';
 import About from './components/About';
-import Team from './components/Team';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import TechStack from './components/TechStack';
+import Team from './components/TeamNew';
+import Process from './components/Process';
+import Testimonials from './components/TestimonialsNew';
+import Contact from './components/ContactNew';
+import Footer from './components/FooterNew';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <Hero />
-      <Services />
-      <Products />
-      <About />
-      <Team />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+        <SEOHead />
+        <AnimatedBackground />
+        <Navbar />
+        <Hero />
+        <About />
+        <Services />
+        <Products />
+        <TechStack />
+        <Team />
+        <Process />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

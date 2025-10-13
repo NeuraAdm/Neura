@@ -1,123 +1,243 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Phone, Mail, MapPin, Moon, Sun } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
+import logoImage from '../images/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useTheme();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navItems = [
+    { name: 'Servicios', href: '#services' },
+    { name: 'Productos', href: '#products' },
+    { name: 'Sobre Nosotros', href: '#about' },
+    { name: 'Equipo', href: '#team' },
+    { name: 'Testimonios', href: '#testimonials' },
+    { name: 'Proceso', href: '#process' },
+  ];
+
+  const contactInfo = [
+    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
+    { icon: Mail, text: 'contacto@neura.com', href: 'mailto:contacto@neura.com' },
+    { icon: MapPin, text: 'Ciudad, País', href: '#contact' },
+  ];
 
   return (
-    <nav className="bg-teal-800 shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0 flex items-center">
-              <img className="h-8 w-auto" src="/images/logo.png" alt="Logo Neura" />
-              <span className="ml-2 text-2xl font-bold text-white">Neura</span>
-            </div>
-            <div className="hidden md:ml-14 md:flex md:space-x-8">
-              <a href="#services" className="inline-flex items-center text-lg font-medium text-white hover:text-indigo-600 hover:border-indigo-600">
-                Servicios
-              </a>
-              <a href="#products" className="inline-flex items-center text-lg  font-medium text-white hover:text-indigo-600 hover:border-indigo-600">
-                Productos
-              </a>
-              <a href="#about" className="inline-flex items-center text-lg   font-medium text-white hover:text-indigo-600 hover:border-indigo-600">
-                Acerca De
-              </a>
-              <a href="#team" className="inline-flex items-center text-lg  font-medium text-white hover:text-indigo-600 hover:border-indigo-600">
-                Equipo
-              </a>
-              <a href="#testimonials" className="inline-flex items-center text-lg  font-medium text-white hover:text-indigo-600 hover:border-indigo-600">
-                Testimonios
-              </a>
-              <a href="#contact" className="inline-flex items-center text-lg   font-medium text-white hover:text-indigo-600 hover:border-indigo-600">
-                Contacto
-              </a>
-            </div>
-          </div>
-          <div className="hidden md:flex items-center">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-900 hover:bg-indigo-700"
+    <>
+      {/* Main navigation */}
+      <motion.nav
+        className={`sticky top-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-neura border-b border-gray-100 dark:border-gray-800'
+            : 'bg-white dark:bg-gray-900 shadow-sm'
+        }`}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <motion.div 
+              className="flex items-center space-x-3"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              Inicia Ahora
-            </a>
-          </div>
-          <div className="-mr-2 flex items-center md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open main menu</span>
-              {isOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
+              <div className="flex items-center justify-center w-12 h-12 bg-white border-2 dark:bg-gray-800 rounded-xl shadow-neura border-neura-primary/20 dark:border-neura-accent/30">
+                <img 
+                  src={logoImage} 
+                  alt="Neura Logo" 
+                  className="object-contain w-8 h-8"
+                />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold text-transparent bg-gradient-to-r from-neura-primary to-neura-secondary bg-clip-text">
+                  Neura
+                </h1>
+                <p className="text-xs font-medium text-gray-500 dark:text-gray-400">Tech Solutions</p>
+              </div>
+            </motion.div>
 
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="pt-2 pb-3 space-y-1">
-            <a
-              href="#services"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
-              onClick={() => setIsOpen(false)}
-            >
-              Servicios
-            </a>
-            <a
-              href="#products"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
-              onClick={() => setIsOpen(false)}
-            >
-              Productos
-            </a>
-            <a
-              href="#about"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
-              onClick={() => setIsOpen(false)}
-            >
-              Acerca De
-            </a>
-            <a
-              href="#team"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
-              onClick={() => setIsOpen(false)}
-            >
-              Equipo de Trabajo
-            </a>
-            <a
-              href="#testimonials"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
-              onClick={() => setIsOpen(false)}
-            >
-              Testimonios
-            </a>
-            <a
-              href="#contact"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
-              onClick={() => setIsOpen(false)}
-            >
-              Contacto
-            </a>
-            <div className="mt-4 pl-3 pr-4">
-              <a
-                href="#contact"
-                className="block text-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-                onClick={() => setIsOpen(false)}
+            {/* Desktop Navigation */}
+            <div className="items-center hidden space-x-8 lg:flex">
+              {navItems.map((item) => (
+                <motion.a
+                  key={item.name}
+                  href={item.href}
+                  className="relative font-medium text-gray-700 transition-colors duration-200 dark:text-gray-300 hover:text-neura-primary dark:hover:text-neura-accent group"
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.querySelector(item.href)?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }}
+                >
+                  {item.name}
+                  <motion.div
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-neura-gradient rounded-full"
+                    initial={{ scaleX: 0 }}
+                    whileHover={{ scaleX: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.a>
+              ))}
+            </div>
+
+            {/* Dark Mode Toggle & Mobile Menu */}
+            <div className="flex items-center space-x-3">
+              {/* Dark Mode Toggle */}
+              <motion.button
+                onClick={toggleDarkMode}
+                className="p-2 text-gray-600 transition-colors duration-300 bg-gray-100 rounded-lg dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                aria-label="Toggle dark mode"
               >
-                Inicia Ahora
-              </a>
+                {isDarkMode ? (
+                  <Sun className="w-5 h-5" />
+                ) : (
+                  <Moon className="w-5 h-5" />
+                )}
+              </motion.button>
+
+              {/* Mobile menu button */}
+              <div className="lg:hidden">
+                <motion.button
+                onClick={() => setIsOpen(!isOpen)}
+                className="inline-flex items-center justify-center p-2 text-gray-700 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:text-neura-primary dark:hover:text-neura-accent hover:bg-gray-100 dark:hover:bg-gray-800"
+                whileTap={{ scale: 0.95 }}
+              >
+                <AnimatePresence mode="wait">
+                  {isOpen ? (
+                    <motion.div
+                      key="close"
+                      initial={{ rotate: -90, opacity: 0 }}
+                      animate={{ rotate: 0, opacity: 1 }}
+                      exit={{ rotate: 90, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <X className="w-6 h-6" />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="menu"
+                      initial={{ rotate: 90, opacity: 0 }}
+                      animate={{ rotate: 0, opacity: 1 }}
+                      exit={{ rotate: -90, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Menu className="w-6 h-6" />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.button>
+              </div>
             </div>
           </div>
         </div>
-      )}
-    </nav>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className="border-t border-gray-100 dark:border-gray-700 lg:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+            >
+              <div className="px-4 py-6 space-y-4">
+                {navItems.map((item, index) => (
+                  <motion.a
+                    key={item.name}
+                    href={item.href}
+                    className="block py-2 text-lg font-medium text-gray-700 transition-colors duration-200 dark:text-gray-300 hover:text-neura-primary dark:hover:text-neura-accent"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsOpen(false);
+                      setTimeout(() => {
+                        document.querySelector(item.href)?.scrollIntoView({
+                          behavior: 'smooth',
+                          block: 'start'
+                        });
+                      }, 300);
+                    }}
+                  >
+                    {item.name}
+                  </motion.a>
+                ))}
+                
+                <motion.div
+                  className="pt-4 border-t border-gray-200"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.6 }}
+                >
+                  
+                  {/* Dark Mode Toggle for Mobile */}
+                  <motion.button
+                    onClick={toggleDarkMode}
+                    className="flex items-center justify-center w-full p-3 mt-2 space-x-2 text-gray-600 transition-colors duration-300 bg-gray-100 rounded-lg dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {isDarkMode ? (
+                      <>
+                        <Sun className="w-5 h-5" />
+                        <span>Modo Claro</span>
+                      </>
+                    ) : (
+                      <>
+                        <Moon className="w-5 h-5" />
+                        <span>Modo Oscuro</span>
+                      </>
+                    )}
+                  </motion.button>
+                </motion.div>
+
+                {/* Mobile contact info */}
+                <motion.div
+                  className="pt-4 space-y-3"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.7 }}
+                >
+                  {contactInfo.map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.href}
+                      className="flex items-center space-x-3 text-gray-600 transition-colors duration-200 hover:text-neura-primary"
+                    >
+                      <item.icon className="w-5 h-5" />
+                      <span>{item.text}</span>
+                    </a>
+                  ))}
+                </motion.div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.nav>
+    </>
   );
 };
 

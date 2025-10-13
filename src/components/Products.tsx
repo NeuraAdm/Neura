@@ -40,26 +40,28 @@ const Products = () => {
 
         <div className="mt-16 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {products.map((product, index) => (
-            <div key={index} className="group relative">
+            <div key={index} className="group relative" itemScope itemType="https://schema.org/SoftwareApplication">
               <div className="w-full min-h-80 bg-white rounded-lg border overflow-hidden shadow-lg">
                 <div className={`${product.color} p-6`}>
                   <div className="flex items-center">
                     {product.icon}
-                    <h3 className="ml-3 text-xl font-bold text-white">{product.name}</h3>
+                    <h3 className="ml-3 text-xl font-bold text-white" itemProp="name">{product.name}</h3>
                   </div>
                 </div>
                 <div className="p-6">
-                  <p className="text-base text-gray-800 mb-4 text-center-inherit">{product.description}</p>
+                  <p className="text-base text-gray-800 mb-4 text-center-inherit" itemProp="description">{product.description}</p>
+                  <meta itemProp="applicationCategory" content="BusinessApplication" />
+                  <meta itemProp="operatingSystem" content="Web" />
                   <h4 className="text-sm font-medium text-gray-900 mb-2">Caracteristicas:</h4>
                   <ul className="list-disc pl-5 text-sm text-gray-500 font-bold">
                     {product.features.map((feature, idx) => (
-                      <li key={idx} className="mb-1">{feature}</li>
+                      <li key={idx} className="mb-1" itemProp="featureList">{feature}</li>
                     ))}
                   </ul>
                 </div>
               </div>
               <div className="mt-4 flex justify-center">
-                <a href="#" className="text-xl font-medium text-indigo-600 hover:text-indigo-500">
+                <a href="#" className="text-xl font-medium text-indigo-600 hover:text-indigo-500" itemProp="url">
                   Conoce mas de {product.name} →
                 </a>
               </div>

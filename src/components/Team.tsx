@@ -31,19 +31,20 @@ const Team = () => {
 
         <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-4 sm:grid-cols-2">
           {team.map((member, index) => (
-            <div key={index} className="text-center border shadow-sm p-4 rounded-lg">
+            <div key={index} className="text-center border shadow-sm p-4 rounded-lg" itemScope itemType="https://schema.org/Person">
               <div className="space-y-4">
                 <img
                   className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56 object-cover"
                   src={member.image}
                   alt={member.name}
+                  itemProp="image"
                 />
                 <div className="space-y-2">
                   <div className="text-lg leading-6 font-medium space-y-1">
-                    <h3 className="text-gray-900">{member.name}</h3>
-                    <p className="text-indigo-600">{member.role}</p>
+                    <h3 className="text-gray-900" itemProp="name">{member.name}</h3>
+                    <p className="text-indigo-600" itemProp="jobTitle">{member.role}</p>
                   </div>
-                  <p className="text-sm text-gray-500 font-bold">{member.bio}</p>
+                  <p className="text-sm text-gray-500 font-bold" itemProp="description">{member.bio}</p>
                   <ul className="flex justify-center space-x-5">
                     <li>
                       <a href={member.social.twitter} className="text-gray-400 hover:text-gray-500">
