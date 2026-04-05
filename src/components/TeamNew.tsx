@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { 
-  Linkedin, 
-  Github, 
+import {
+  Linkedin,
+  Github,
   Mail,
   Award,
   Code,
@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import AnimatedSection from './common/AnimatedSection';
 import juan from '../images/Juan.jpg';
+import Luis from '../images/Luis.jpeg'
 
 const Team = () => {
   const teamMembers = [
@@ -18,7 +19,7 @@ const Team = () => {
       name: 'Juan Pablo Arias',
       role: 'CEO & Founder',
       title: 'Visionario Tecnológico',
-      image: juan ,
+      image: juan,
       bio: 'Arquitecto de soluciones empresariales con 2+ años transformando visiones en realidades digitales. Especialista en arquitecturas escalables y desarrollo full-stack.',
       expertise: ['Arquitecto de Software', 'Desarrollador Full Stack', 'Gestión de Proyectos', 'Liderazgo Técnico', 'Tech Lead'],
       achievements: ['30+ proyectos liderados'],
@@ -32,23 +33,23 @@ const Team = () => {
       gradient: 'from-blue-500 to-purple-600',
       featured: true
     },
-    // {
-    //   name: 'María González',
-    //   role: 'CTO & Co-founder',
-    //   title: 'Arquitecta de Innovación',
-    //   image: 'https://images.unsplash.com/photo-1494790108755-2616b612b547?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-    //   bio: 'Experta en arquitecturas cloud escalables y DevOps. Lidera equipos técnicos hacia la excelencia operacional.',
-    //   expertise: ['Cloud Architecture', 'DevOps & CI/CD', 'Cybersecurity', 'Team Building'],
-    //   achievements: ['AWS Solutions Architect', '99.99% uptime record', 'Google Cloud Expert'],
-    //   personality: 'Perfeccionista que convierte complejidad en simplicidad elegante',
-    //   social: {
-    //     linkedin: 'https://linkedin.com/in/mariagonzalez',
-    //     twitter: 'https://twitter.com/maria_dev',
-    //     github: 'https://github.com/mariagonzalez',
-    //     email: 'maria@neura.com'
-    //   },
-    //   gradient: 'from-green-500 to-teal-600'
-    // }
+    {
+      name: 'Luis Eduardo Niño',
+      role: 'Software Engineer',
+      title: 'Desarrollador Apasionado',
+      image: Luis,
+      bio: 'Experto en Algoritmos y Estructuras de Datos con 2+ años creando soluciones eficientes y escalables. Apasionado por la innovación tecnológica y el desarrollo de software de alta calidad.',
+      expertise: ['DevOps & CI/CD', 'Cybersecurity', 'Desarrollo Backend'],
+      achievements: ['AWS Solutions Architect', '99.99% uptime record', 'Google Cloud Expert'],
+      personality: 'Pensador analítico con pasión por la eficiencia y la optimización',
+      social: {
+        linkedin: 'https://linkedin.com/in/LuisDev',
+        twitter: 'https://twitter.com/LuisDevOps',
+        github: 'https://github.com/Luis200-4',
+        email: 'luisdeveloper200407@gmail.com'
+      },
+      gradient: 'from-green-500 to-teal-600'
+    }
   ];
 
   return (
@@ -67,7 +68,7 @@ const Team = () => {
             Conoce a los <span className="gradient-text">Arquitectos</span> de tu Éxito
           </h2>
           <p className="section-subtitle">
-            Cada miembro de nuestro equipo aporta años de experiencia y una pasión genuina por 
+            Cada miembro de nuestro equipo aporta años de experiencia y una pasión genuina por
             crear soluciones que transforman negocios. Conoce a las personas detrás de la magia.
           </p>
         </AnimatedSection>
@@ -88,22 +89,22 @@ const Team = () => {
                     />
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-br from-neura-primary/10 via-transparent to-neura-secondary/10 rounded-3xl hover:opacity-100"></div>
-                    
+
                     {/* Enhanced Award Badge */}
-                    <motion.div 
+                    <motion.div
                       className="absolute p-3 bg-white border-2 shadow-xl -bottom-4 -right-4 dark:bg-gray-800 rounded-2xl border-neura-primary/20"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
                       <Award className="w-8 h-8 text-neura-primary" />
                     </motion.div>
-                    
+
                     {/* Decorative Particles */}
                     <div className="absolute w-3 h-3 rounded-full top-4 left-4 bg-neura-accent opacity-60 animate-pulse"></div>
                     <div className="absolute w-2 h-2 delay-500 rounded-full top-8 right-8 bg-neura-secondary opacity-40 animate-pulse"></div>
                     <div className="absolute w-4 h-4 rounded-full bottom-12 left-6 bg-neura-primary/30 blur-sm"></div>
                   </div>
-                  
+
                   <div className="text-center lg:text-left">
                     <span className="inline-block px-4 py-2 mb-4 text-sm font-bold text-white rounded-full bg-gradient-to-r from-neura-primary to-neura-secondary">
                       FUNDADOR
@@ -191,7 +192,7 @@ const Team = () => {
               >
                 {/* Background Gradient Effect */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${member.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                
+
                 {/* Profile Image */}
                 <div className="relative mb-6 text-center">
                   <motion.div className="relative inline-block">
