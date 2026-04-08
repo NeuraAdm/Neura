@@ -29,9 +29,9 @@ const Navbar = () => {
   ];
 
   const contactInfo = [
-    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: Mail, text: 'contacto@neura.com', href: 'mailto:contacto@neura.com' },
-    { icon: MapPin, text: 'Ciudad, País', href: '#contact' },
+    { icon: Phone, text: '+57 304 359 1840', href: 'tel:+573043591840' },
+    { icon: Mail, text: 'neura.admt@gmail.com', href: 'mailto:neura.admt@gmail.com' },
+    { icon: MapPin, text: 'Pereira, Colombia', href: '#contact' },
   ];
 
   return (
@@ -63,9 +63,9 @@ const Navbar = () => {
                 />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-transparent bg-gradient-to-r from-neura-primary to-neura-secondary bg-clip-text">
+                <p className="text-2xl font-bold text-transparent bg-gradient-to-r from-neura-primary to-neura-secondary bg-clip-text">
                   Neura
-                </h1>
+                </p>
                 <p className="text-xs font-medium text-gray-500 dark:text-gray-400">Tech Solutions</p>
               </div>
             </motion.div>

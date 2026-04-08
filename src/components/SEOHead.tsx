@@ -9,12 +9,15 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({ 
-  title = "Neura - Transformación Digital | Soluciones Tecnológicas Innovadoras",
-  description = "Neura ofrece soluciones de transformación digital innovadoras. Desarrollo web, aplicaciones móviles, IA, cloud computing y consultoría tecnológica para impulsar tu negocio.",
-  keywords = "transformación digital, desarrollo web, aplicaciones móviles, inteligencia artificial, cloud computing, consultoría tecnológica, soluciones digitales, automatización, innovación tecnológica",
-  image = "/images/logo.png",
-  url = "https://neura.tech"
+  title = "Neura | Desarrollo SaaS, IA y Transformacion Digital",
+  description = "Neura desarrolla soluciones SaaS, automatizacion con IA y paginas web de alto rendimiento para empresas en Colombia y LATAM.",
+  keywords = "desarrollo saas, desarrollo web, automatizacion con ia, consultoria tecnologica, transformacion digital, software a medida",
+  image = "/og-image.png",
+  url = "https://neuracorp.com.co/"
 }: SEOHeadProps) => {
+  const siteUrl = (typeof window !== 'undefined' ? window.location.origin : 'https://neuracorp.com.co').replace(/\/+$/, '');
+  const normalizedUrl = url.startsWith('http') ? url : `${siteUrl}${url.startsWith('/') ? url : `/${url}`}`;
+  const normalizedImage = image.startsWith('http') ? image : `${siteUrl}${image.startsWith('/') ? image : `/${image}`}`;
   
   useEffect(() => {
     // Update document title
@@ -45,12 +48,12 @@ const SEOHead = ({
     
     const ogImage = document.querySelector('meta[property="og:image"]');
     if (ogImage) {
-      ogImage.setAttribute('content', image);
+      ogImage.setAttribute('content', normalizedImage);
     }
     
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) {
-      ogUrl.setAttribute('content', url);
+      ogUrl.setAttribute('content', normalizedUrl);
     }
     
     // Update Twitter Card meta tags
@@ -66,16 +69,16 @@ const SEOHead = ({
     
     const twitterImage = document.querySelector('meta[name="twitter:image"]');
     if (twitterImage) {
-      twitterImage.setAttribute('content', image);
+      twitterImage.setAttribute('content', normalizedImage);
     }
     
     // Update canonical URL
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
-      canonical.setAttribute('href', url);
+      canonical.setAttribute('href', normalizedUrl);
     }
     
-  }, [title, description, keywords, image, url]);
+  }, [title, description, keywords, normalizedImage, normalizedUrl]);
 
   return null; // This component doesn't render anything
 };

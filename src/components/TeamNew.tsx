@@ -25,7 +25,7 @@ const Team = () => {
       achievements: ['30+ proyectos liderados'],
       personality: 'Innovador incansable que encuentra soluciones donde otros ven problemas',
       social: {
-        linkedin: 'https:///linkedin.com/in/juan-pablo-a-a62719142',
+        linkedin: 'https://linkedin.com/in/juan-pablo-a-a62719142',
         twitter: 'https://twitter.com/NeuraAdmt',
         github: 'https://github.com/NeuraAdm',
         email: 'neura.admt@gmail.com'
@@ -148,6 +148,8 @@ const Team = () => {
                   <div className="flex space-x-4">
                     <motion.a
                       href={member.social.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-3 text-blue-600 transition-colors duration-200 bg-blue-100 rounded-lg dark:text-blue-400 dark:bg-blue-900 hover:bg-blue-200 dark:hover:bg-blue-800"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
@@ -155,7 +157,7 @@ const Team = () => {
                       <Linkedin className="w-5 h-5" />
                     </motion.a>
                     <motion.a
-                      href={member.social.email}
+                      href={`mailto:${member.social.email}`}
                       className="p-3 text-green-600 transition-colors duration-200 bg-green-100 rounded-lg dark:text-green-400 dark:bg-green-900 hover:bg-green-200 dark:hover:bg-green-800"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
@@ -164,6 +166,8 @@ const Team = () => {
                     </motion.a>
                     <motion.a
                       href={member.social.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-3 text-gray-600 transition-colors duration-200 bg-gray-100 rounded-lg dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
@@ -242,6 +246,8 @@ const Team = () => {
                 <div className="flex justify-center space-x-3">
                   <motion.a
                     href={member.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-2 text-gray-600 transition-colors duration-200 bg-gray-100 rounded-lg dark:bg-gray-700 dark:text-gray-300 hover:bg-blue-100 hover:text-blue-600 dark:hover:bg-gray-600"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
@@ -249,7 +255,7 @@ const Team = () => {
                     <Linkedin className="w-4 h-4" />
                   </motion.a>
                   <motion.a
-                    href={member.social.email}
+                    href={`mailto:${member.social.email}`}
                     className="p-2 text-gray-600 transition-colors duration-200 bg-gray-100 rounded-lg dark:bg-gray-700 dark:text-gray-300 hover:bg-green-100 hover:text-green-600 dark:hover:bg-gray-600"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
@@ -258,6 +264,8 @@ const Team = () => {
                   </motion.a>
                   <motion.a
                     href={member.social.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-2 text-gray-600 transition-colors duration-200 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}

@@ -119,7 +119,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Neura. All rights reserved.
           </p>
           <div className="mt-4 text-sm text-white">
-            <a href="https://neuraadm.github.io/Neura/" target="_blank" rel="noopener noreferrer" className="transition-colors text-muted-foreground hover:text-teal-500">
+            <a href="https://neuracorp.com.co/" target="_blank" rel="noopener noreferrer" className="transition-colors text-muted-foreground hover:text-teal-500">
               <p>Design by Neura</p>
             </a>
           </div>

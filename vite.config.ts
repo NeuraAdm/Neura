@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Neura/',
+  base: '/',
   build: {
-    outDir: 'docs',  // Cambia de 'dist' a 'docs'
+    outDir: 'dist',
     sourcemap: false,
     minify: 'terser',
     terserOptions: {

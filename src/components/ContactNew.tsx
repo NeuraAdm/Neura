@@ -59,7 +59,7 @@ const Contact = () => {
 ${formData.message || "Sin mensaje adicional"}
 
 ---
-*Consulta generada desde neura.com*
+*Consulta generada desde neuracorp.com.co*
 Fecha: ${new Date().toLocaleDateString('es-ES')}
     `.trim();
     
