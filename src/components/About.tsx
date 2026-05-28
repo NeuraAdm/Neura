@@ -11,13 +11,13 @@ const About = () => {
     },
     {
       icon: Users,
-      title: "Nuestra prioridad eres tú",
-      description: "Nos enfocamos en ofrecerte un servicio personalizado y de calidad."
+      title: "Prioridad al Cliente",
+      description: "Nos enfocamos en ofrecer un servicio personalizado y de calidad."
     },
     {
       icon: Award,
       title: "Calidad Asegurada",
-      description: "Nuestros rigurosos procesos de control de calidad garantizan que obtengas el mejor producto."
+      description: "Nuestros rigurosos procesos de control de calidad garantizan que se entregue el mejor producto."
     },
     {
       icon: Lightbulb,

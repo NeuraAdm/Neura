@@ -14,6 +14,7 @@ import AnimatedSection from './common/AnimatedSection';
 import AnimatedButton from './common/AnimatedButton';
 import { Modal } from './common/Modal';
 import Gestus from '../images/Gestus.png';
+import UDC from '../images/UDC.png';
 
 interface SuccessStat {
   icon: LucideIcon;
@@ -56,15 +57,15 @@ const Products = () => {
       description: 'Plataforma para la Gestion del Sistema de Seguridad y Salud en el Trabajo (SG-SST)',
       shortDesc: 'Solución integral para la gestión SST',
       features: [
-        'Gestion administrativa de personal',
-        'Gestion de riesgos laborales',
-        'Automatización de reportes legales',
-        'Digitalizacion de procesos SST',
-        'Formatos y documentos digitales',
+        'Gestion Humana',
+        'Gestion de Documentacion referente al SST',
+        'Automatización de reportes',
+        'Manejo de Digitalizacion de formatos/registros',
+        'Control de Rendimiento y Productividad',
       ],
       metrics: {
-        sales: '+120%',
-        users: '100+'
+        sales: '+100%',
+        users: '50+'
       },
       client: 'Gestus Soluciones Integrales SAS',
       industry: 'Seguridad y Salud en el Trabajo',
@@ -77,8 +78,8 @@ const Products = () => {
     },
     {
       name: 'Universo del Campo',
-      description: 'Sistema/Plataforma para la gestion de la ganaderia',
-      shortDesc: 'Solución integral para la gestión ganadera',
+      description: 'Plataforma para la Gestion Ganadera',
+      shortDesc: 'Sistema para la gestión ganadera',
       features: [
         'Control de inventarios',
         'Gestion de fincas',
@@ -86,15 +87,15 @@ const Products = () => {
         'Automatización de reportes',
         'Control de costos',
         'Analisis de productividad',
-        'Integración con dispositivos IoT',
         'Alertas y notificaciones',
-        'Dashboard de indicadores'  
+        'Dashboard de indicadores',
+        'Notificaciones de eventos importantes',  
       ],
       metrics: {
-        costs: '-30%',
-        productivity: '+150%',
-        efficiency: '+200%',
-        users: '500+'
+        costs: '-50%',
+        productivity: '+120%',
+        efficiency: '+100%',
+        users: '100+'
       },
       client: 'Universo del Campo',
       industry: 'Agricultura y Ganadería',
@@ -102,14 +103,15 @@ const Products = () => {
       icon: Zap,
       color: 'from-green-500 to-green-600',
       bgColor: 'bg-green-50',
-      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80'
+      image: UDC
     }
   ];
 
   const successStats: SuccessStat[] = [
-    { icon: Award, label: 'Proyectos Entregados', value: '25+' },
-    { icon: TrendingUp, label: 'ROI Promedio', value: '150%' },
-    { icon: Users, label: 'Clientes Activos', value: '200+' },
+    { icon: Award, label: 'Proyectos Entregados', value: '5+' },
+    { icon: TrendingUp, label: 'Procesos Optimizados', value: '+200%' },
+    { icon: Users, label: 'Clientes Activos', value: '10+' },
+    { icon: Clock, label: 'Tiempo de Desarrollo', value: '-30%' }
   ];
 
   return (

@@ -2,9 +2,7 @@ import { motion } from 'framer-motion';
 import { 
   Database, 
   Cloud,
-  Shield, 
   Monitor,
-  Cpu,
   Layers
 } from 'lucide-react';
 import AnimatedSection from './common/AnimatedSection';
@@ -16,11 +14,11 @@ const TechStack = () => {
       icon: Monitor,
       color: 'from-blue-500 to-blue-600',
       technologies: [
-        { name: 'React', level: 95, description: 'Biblioteca principal para interfaces' },
-        { name: 'Tailwind CSS', level: 92, description: 'Diseño utility-first' },
-        { name: 'Vue.js', level: 80, description: 'Framework progresivo' },
-        { name: 'JavaScript', level: 88, description: 'Interactividad y Dinamismo' },
-        { name: 'Angular', level: 90, description: 'Framework para aplicaciones web' }
+        { name: 'React', level: 90, description: 'Biblioteca principal para interfaces' },
+        { name: 'Tailwind CSS', level: 100, description: 'Diseño utility-first' },
+        { name: 'VueJS', level: 70, description: 'Framework progresivo' },
+        { name: 'JavaScript', level: 80, description: 'Interactividad y Dinamismo' },
+        { name: 'NextJS', level: 80, description: 'Framework para desarrollo web' }
       ]
     },
     {
@@ -28,14 +26,15 @@ const TechStack = () => {
       icon: Database,
       color: 'from-green-500 to-green-600',
       technologies: [
-        { name: 'Node.js', level: 93, description: 'Runtime JavaScript escalable' },
-        { name: 'Python', level: 89, description: 'IA y desarrollo web' },
-        { name: 'PostgreSQL', level: 87, description: 'Base de datos relacional' },
-        { name: 'MongoDB', level: 85, description: 'Base de datos NoSQL' },
-        { name: 'Django', level: 82, description: 'Framework web Python' },
-        { name: 'Laravel', level: 80, description: 'Framework PHP' },
-        { name: 'Express.js', level: 90, description: 'Framework web Node.js' },
-        { name: 'PHP', level: 78, description: 'Lenguaje de servidor' },
+        { name: 'Node.js', level: 90, description: 'Runtime JavaScript escalable' },
+        { name: 'Python', level: 85, description: 'IA y desarrollo web' },
+        { name: 'PostgreSQL', level: 95, description: 'Base de datos relacional' },
+        { name: 'MongoDB', level: 70, description: 'Base de datos NoSQL' },
+        { name: 'Django', level: 75, description: 'Framework web Python' },
+        { name: 'Laravel', level: 70, description: 'Framework PHP' },
+        { name: 'Express.js', level: 95, description: 'Framework web Node.js' },
+        { name: 'PHP', level: 70, description: 'Lenguaje de servidor' },
+        { name: 'NestJS', level: 85, description: 'Framework para desarrollo web' }
       ]
     },
     {
@@ -43,33 +42,15 @@ const TechStack = () => {
       icon: Cloud,
       color: 'from-purple-500 to-purple-600',
       technologies: [
-        { name: 'AWS', level: 91, description: 'Servicios cloud principales' },
-        { name: 'Docker', level: 88, description: 'Contenedorización' },
-        { name: 'CI/CD', level: 86, description: 'Pipelines automatizados' }
-      ]
-    },
-    {
-      category: 'AI & Analytics',
-      icon: Cpu,
-      color: 'from-red-500 to-red-600',
-      technologies: [
-        { name: 'TensorFlow', level: 82, description: 'Machine Learning' },
-        { name: 'PyTorch', level: 78, description: 'Deep Learning' },
-        { name: 'OpenAI API', level: 88, description: 'Integración IA generativa' },
-        { name: 'Power BI', level: 85, description: 'Business Intelligence' },
-        { name: 'D3.js', level: 80, description: 'Visualización de datos' }
-      ]
-    },
-    {
-      category: 'Security',
-      icon: Shield,
-      color: 'from-indigo-500 to-indigo-600',
-      technologies: [
-        { name: 'OAuth 2.0', level: 90, description: 'Autenticación segura' },
-        { name: 'JWT', level: 88, description: 'Tokens de acceso' },
-        { name: 'SSL/TLS', level: 92, description: 'Encriptación de datos' },
-        { name: 'OWASP', level: 86, description: 'Prácticas de seguridad' },
-        { name: 'Penetration Testing', level: 84, description: 'Auditorías de seguridad' }
+        { name: 'AWS', level: 80, description: 'Servicios cloud principales' },
+        { name: 'Docker', level: 90, description: 'Contenedorización' },
+        { name: 'CI/CD', level: 85, description: 'Pipelines automatizados' },
+        { name: 'Cloudflare', level: 90, description: 'Servicio de entrega de contenido' },
+        { name: 'Azure', level: 75, description: 'Servicios cloud Microsoft' },
+        { name: 'GitHub Actions', level: 80, description: 'Automatización de flujos de trabajo' },
+        { name: 'Firebase', level: 85, description: 'Servicios de backend en la nube' },
+        { name: 'Supabase', level: 70, description: 'Gestion de bases de datos en la nube+auth+storage' },
+        { name: 'Netlify', level: 80, description: 'Plataforma de despliegue y funciones serverless' }
       ]
     }
   ];

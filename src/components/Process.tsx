@@ -20,11 +20,11 @@ const Process = () => {
     {
       number: '01',
       title: 'Análisis Estratégico',
-      description: 'Evaluación profunda de tu negocio, objetivos y desafíos actuales',
+      description: 'Evaluación exhaustiva de tu negocio, objetivos y desafíos actuales',
       icon: Search,
       deliverables: [
         'Auditoría tecnológica completa',
-        'Análisis de competencia',
+        'Análisis de puntos de dolor',
         'Identificación de oportunidades',
         'Definición de KPIs'
       ],
@@ -34,27 +34,27 @@ const Process = () => {
     {
       number: '02',
       title: 'Diseño & Arquitectura',
-      description: 'Creación de la solución perfecta adaptada a tus necesidades específicas',
+      description: 'Implementacion de soluciones innovadoras con un enfoque centrado en el usuario y escalabilidad',
       icon: Lightbulb,
       deliverables: [
-        'Arquitectura técnica detallada',
-        'Mockups y prototipos',
-        'Plan de implementación',
-        'Estimaciones precisas'
+        'Arquitectura robusta y escalable',
+        'Prototipado de alta fidelidad',
+        'Plan de implementación detallado',
+        'Mediciones y análisis de usabilidad'
       ],
-      tools: ['System Architecture', 'UI/UX Design', 'Prototyping'],
+      tools: ['System Design', 'Schema Design', 'Prototyping'],
       color: 'from-yellow-500 to-orange-500'
     },
     {
       number: '03',
-      title: 'Desarrollo Ágil',
-      description: 'Construcción iterativa con entregas frecuentes y feedback continuo',
+      title: 'Desarrollo Efectivo',
+      description: 'Construcción iterativa de soluciones y enfoque en la calidad',
       icon: Code,
       deliverables: [
-        'Sprints con entregas regulares',
-        'Código limpio y documentado',
-        'Testing automatizado',
-        'Documentación técnica'
+        'Estrategias de desarrollo iterativo',
+        'Documentación de procesos',
+        'Pruebas con usuarios reales',
+        'Pre-entrega y ajustes finales'
       ],
       tools: ['Agile/Scrum', 'CI/CD', 'Automated Testing'],
       color: 'from-green-500 to-green-600'
@@ -62,13 +62,13 @@ const Process = () => {
     {
       number: '04',
       title: 'Lanzamiento & Optimización',
-      description: 'Implementación exitosa con monitoreo continuo y optimizaciones',
+      description: 'Implementación de la solución con monitoreo continuo',
       icon: Rocket,
       deliverables: [
-        'Despliegue en producción',
-        'Capacitación del equipo',
+        'Despliegue en entorno real',
+        'Capacitación sobre el uso y mantenimiento',
         'Monitoreo y métricas',
-        'Soporte continuo'
+        'Soporte continuo y optimización post-lanzamiento'
       ],
       tools: ['Deployment', 'Monitoring', 'Training'],
       color: 'from-purple-500 to-purple-600'
@@ -79,22 +79,22 @@ const Process = () => {
     {
       icon: Users,
       title: 'Equipos Dedicados',
-      description: 'Un equipo especializado asignado exclusivamente a tu proyecto'
+      description: 'Un equipo especializado que se integra como parte de tu empresa'
     },
     {
       icon: Calendar,
-      title: 'Entregas Semanales',
-      description: 'Demostraciones funcionales cada sprint para validar el progreso'
+      title: 'Entregas Efectivas',
+      description: 'Demostraciones que muestran avances tangibles'
     },
     {
       icon: Shield,
       title: 'Calidad Garantizada',
-      description: 'Testing automatizado y code reviews en cada línea de código'
+      description: 'Procesos de control de calidad rigurosos para asegurar resultados excepcionales'
     },
     {
       icon: Zap,
-      title: 'Respuesta Rápida',
-      description: 'Comunicación directa y resolución de dudas en menos de 2 horas'
+      title: 'Comunicacion Ágil',
+      description: 'Comunicación directa y resolución de dudas'
     }
   ];
 
@@ -102,17 +102,17 @@ const Process = () => {
     {
       icon: Target,
       title: 'Resultados Garantizados',
-      description: 'Cumplimiento de objetivos planteados'
+      description: 'Cumplimiento de requerimientos planteados'
     },
     {
       icon: TrendingUp,
-      title: 'ROI Asegurado',
-      description: 'Garantizamos retorno de inversión positivo en los primeros 6 meses'
+      title: 'Entregas de Valor',
+      description: 'Garantizamos entregas que impulsan tu negocio hacia adelante'
     },
     {
       icon: Award,
       title: 'Satisfacción Total',
-      description: '98% de satisfacción cliente respaldada'
+      description: '95% de satisfacción cliente respaldada'
     }
   ];
 
@@ -132,8 +132,7 @@ const Process = () => {
             Nuestro Proceso <span className="gradient-text">Garantizado</span>
           </h2>
           <p className="section-subtitle">
-            Una metodología refinada durante 2 años que asegura entregas exitosas, 
-            sin sorpresas y con resultados medibles desde el día uno.
+            Una metodología refinada durante 2 años que asegura entregas exitosas.
           </p>
         </AnimatedSection>
 

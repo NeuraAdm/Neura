@@ -54,29 +54,29 @@ const Services = () => {
     {
       icon: Code,
       title: 'Desarrollo SaaS Personalizado',
-      description: 'Aplicaciones web escalables que revolucionan tu modelo de negocio',
+      description: 'Plataformas web escalables que revolucionan tu modelo de negocio',
       features: ['Arquitectura moderna', 'APIs robustas', 'Integración completa'],
-      benefit: 'Aumenta Productividad 250%',
+      benefit: 'Rendimiento +150%',
       color: 'from-blue-500 to-blue-600',
       bgColor: 'bg-blue-50',
       borderColor: 'border-blue-200',
       popular: true,
       detailedFeatures: [
-        'Arquitectura Modular Escalable',
-        'APIs RESTful',
-        'Dashboard administrativo completo',
+        'Arquitectura Robusta y Escalable',
+        'API Robusta y Documentada',
+        'Dashboard BackOffice Personalizado',
         'Notificaciones en tiempo real',
         'Analytics y métricas avanzadas',
-        'Soporte multi-servicio'
+        'Soporte multiplataforma',
       ],
       metrics: {
         'Tiempo de desarrollo': '3-6 meses',
-        'ROI esperado': '+150%',
+        'Productividad': '+100%',
         'Uptime garantizado': '99.9%'
       },
       process: [
         'Análisis de Requerimientos y Arquitectura',
-        'Diseño UX/UI y prototipado',
+        'Prototipado y Diseño UML',
         'Desarrollo Backend y Frontend',
         'Integración y Testing',
         'Despliegue y Soporte Post-lanzamiento'
@@ -96,27 +96,24 @@ const Services = () => {
       detailedFeatures: [
         'Diseño web responsive y moderno',
         'Optimización SEO completa',
-        'Sistema de gestión de contenido',
-        'Integración con redes sociales',
-        'Formularios de contacto avanzados',
         'Analytics y métricas de rendimiento',
-        'Hosting y dominio incluido',
+        'Hosting y Dominio incluido',
         'Certificado SSL y seguridad'
       ],
       metrics: {
-        'Tiempo de desarrollo': '2-6 semanas',
-        'Mejora en conversiones': '+160%',
+        'Tiempo de desarrollo': '3-6 semanas',
+        'Engagement': '+150%',
         'Posicionamiento SEO': '+120%',
         'Velocidad de carga': '<3 segundos'
       },
       process: [
         'Análisis de requerimientos y objetivos',
-        'Diseño UX/UI y prototipado',
-        'Desarrollo frontend y backend',
-        'Optimización SEO y testing',
-        'Lanzamiento y capacitación'
+        'Prototipado y diseño visual',
+        'Desarrollo y optimización SEO',
+        'Testing y revisión con el cliente',
+        'Lanzamiento y soporte inicial'
       ],
-      timeline: '2-6 semanas',
+      timeline: '3-6 semanas',
       investment: 'Desde $500,000COP  130USD'
     },
     {
@@ -136,7 +133,6 @@ const Services = () => {
         'Implementación de mejores prácticas',
         'Auditoría de arquitectura de software',
         'Planificación estratégica tecnológica',
-        'Capacitación y entrenamiento de equipos'
       ],
       metrics: {
         'Mejora en eficiencia': '+200%',
@@ -149,10 +145,10 @@ const Services = () => {
         'Diseño de estrategia y roadmap',
         'Implementación gradual',
         'Monitoreo y optimización continua',
-        'Entrenamiento y transferencia'
+        'Entrenamiento y post-soporte especializado'
       ],
       timeline: '1-2 meses',
-      investment: 'Desde $250,000COP  65USD'
+      investment: 'Desde $350,000COP  85USD'
     },
     {
       icon: Database,
@@ -175,8 +171,7 @@ const Services = () => {
       ],
       metrics: {
         'Uptime garantizado': '99.9%',
-        'Tiempo de respuesta': '<2 horas',
-        'Resolución de incidentes': '95% en 24h',
+        'Resolución de incidentes': '95%',
         'Satisfacción soporte': '4.8/5'
       },
       process: [
@@ -187,84 +182,80 @@ const Services = () => {
         'Optimización y mejoras'
       ],
       timeline: '2-8 semanas',
-      investment: 'Desde $300,000COP  80USD'
+      investment: 'Desde $450,000COP  110USD'
     },
     {
       icon: Shield,
       title: 'Implementación y Capacitación',
       description: 'Implementación exitosa de software y capacitación especializada',
       features: ['Implementación Guiada', 'Capacitación Personalizada', 'Documentación'],
-      benefit: 'Adopción 95%',
+      benefit: 'Adopción 98%',
       color: 'from-red-500 to-red-600',
       bgColor: 'bg-red-50',
       borderColor: 'border-red-200',
       detailedFeatures: [
-        'Implementación guiada paso a paso',
-        'Capacitación personalizada por roles',
+        'Implementación guiada',
+        'Capacitación personalizada por dependencias',
         'Documentación y manuales de usuario',
-        'Sesiones de entrenamiento práctico',
+        'Sesiones de entrenamiento dinamico',
         'Acompañamiento post-implementación',
         'Configuración y personalización',
         'Migración de datos existentes',
         'Validación y testing de usuario'
       ],
       metrics: {
-        'Tasa de adopción': '95%',
-        'Tiempo de implementación': '-40%',
-        'Satisfacción usuarios': '4.7/5',
-        'Reducción errores': '90%'
+        'Tasa de adopción': '98%',
+        'Tiempo de implementación': '-60%',
+        'Satisfacción usuarios': '4.8/5',
+        'Reducción errores': '95%'
       },
       process: [
-        'Análisis de necesidades y roles',
-        'Planificación de implementación',
+        'Análisis de necesidades y dependencias',
+        'Planificación de estrategia de implementación',
         'Configuración y migración de datos',
         'Capacitación y entrenamiento',
-        'Go-live y soporte inicial'
       ],
       timeline: '2-4 meses',
-      investment: 'Desde $250,000COP  65USD'
+      investment: 'Desde $650,000COP  155USD'
     },
     {
       icon: Zap,
-      title: 'Automatización y Agentes de IA',
-      description: 'Automatización inteligente con agentes de IA que revolucionan tus procesos',
-      features: ['Agentes de IA', 'RPA Inteligente', 'Workflows Automatizados'],
-      benefit: 'Ahorro 60 horas/semana',
+      title: 'Agentes de IA',
+      description: 'Agentes de IA que revolucionan tus procesos',
+      features: ['Agentes de IA', 'RPA Inteligente', 'Interfaces Conversacionales'],
+      benefit: 'Conocimiento Indexado +100%',
       color: 'from-yellow-500 to-yellow-600',
       bgColor: 'bg-yellow-50',
       borderColor: 'border-yellow-200',
       detailedFeatures: [
         'Agentes de IA conversacionales',
-        'Automatización de procesos con IA',
-        'Chatbots inteligentes multicanal',
-        'Asistentes virtuales especializados',
-        'Automatización de atención al cliente',
-        'Procesamiento inteligente de documentos',
+        'Automatización de procesos con Agentes de IA',
+        'Asistentes personalizados para equipos',
+        'Procesamiento de lenguaje natural avanzado',
         'Integración con sistemas existentes'
       ],
       metrics: {
-        'Ahorro tiempo': '60+ hrs/semana',
-        'Reducción costos operativos': '70%',
-        'Precisión en tareas': '99.5%',
-        'Satisfacción del cliente': '4.9/5'
+        'Reducción costos operativos': '80%',
+        'Precisión en tareas': '95%',
+        'Satisfacción del cliente': '4.8/5'
       },
       process: [
-        'Análisis de procesos candidatos',
-        'Diseño de agentes de IA especializados',
-        'Desarrollo y entrenamiento de modelos',
-        'Implementación y testing',
+        'Análisis de procesos y oportunidades de automatización',
+        'Diseño de agentes de IA con base de conocimientos previos',
+        'Desarrollo y despliegue de agentes personalizados',
+        'Implementación y testing con usuarios finales',
         'Monitoreo y optimización continua'
       ],
-      timeline: '1-3 meses',
-      investment: 'Desde $200,000COP  55USD'
+      timeline: '1-4 meses',
+      investment: 'Desde $600,000COP  145USD'
     }
   ];
 
   const processSteps = [
     { number: '01', title: 'Análisis', description: 'Evaluamos tu situación actual' },
-    { number: '02', title: 'Estrategia', description: 'Diseñamos la solución perfecta' },
-    { number: '03', title: 'Desarrollo', description: 'Construimos con metodologías ágiles' },
-    { number: '04', title: 'Lanzamiento', description: 'Implementamos y optimizamos' }
+    { number: '02', title: 'Estrategia', description: 'Diseñamos la solución adaptable a tu necesidad' },
+    { number: '03', title: 'Desarrollo', description: 'Construimos con estrategias ágiles y tecnología de punta' },
+    { number: '04', title: 'Lanzamiento', description: 'Implementamos y optimizamos continuamente' }
   ];
 
   return (
@@ -403,11 +394,7 @@ const Services = () => {
           <div className="p-8 text-white bg-neura-gradient rounded-2xl lg:p-12">
             <h3 className="mb-4 text-3xl font-bold lg:text-4xl">
               ¿Listo para Transformar tu Negocio?
-            </h3>
-            <p className="max-w-2xl mx-auto mb-8 text-xl text-neura-light">
-              Únete a más de 10 empresas que ya confían en nuestras soluciones.
-            </p>
-            
+            </h3>            
             <div className="flex flex-col items-center justify-center gap-4 mb-6 sm:flex-row">
               <AnimatedButton
                 href="#contact"
@@ -423,11 +410,11 @@ const Services = () => {
             <div className="flex items-center justify-center space-x-6 text-sm text-neura-light">
               <div className="flex items-center">
                 <Users className="w-4 h-4 mr-2" />
-                25+ clientes satisfechos
+                10+ clientes satisfechos
               </div>
               <div className="flex items-center">
                 <TrendingUp className="w-4 h-4 mr-2" />
-                ROI promedio 150%
+                Procesos optimizados +200%
               </div>
               <div className="flex items-center">
                 <Shield className="w-4 h-4 mr-2" />

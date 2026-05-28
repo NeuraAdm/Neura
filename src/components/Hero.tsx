@@ -7,10 +7,10 @@ const Hero = () => {
   const [currentStat, setCurrentStat] = useState(0);
   
   const stats = [
-    { number: '25+', label: 'Proyectos Exitosos', icon: CheckCircle },
-    { number: '98%', label: 'Satisfacción Cliente', icon: Users },
-    { number: '150%', label: 'ROI Promedio', icon: TrendingUp },
-    { number: '24h', label: 'Tiempo Respuesta', icon: Zap },
+    { number: '5+', label: 'Proyectos Exitosos', icon: CheckCircle },
+    { number: '90%', label: 'Satisfacción Cliente', icon: Users },
+    { number: '3x', label: 'Crecimiento Promedio', icon: TrendingUp },
+    { number: '24/7', label: 'Soporte Continuo', icon: Zap }
   ];
 
   // const trustBadges = [
@@ -61,9 +61,7 @@ const Hero = () => {
             {/* Subtitle */}
             <AnimatedSection direction="up" delay={0.4}>
               <p className="max-w-2xl text-xl leading-relaxed text-gray-600 dark:text-gray-300 lg:text-2xl">
-                Desarrollamos <strong className="text-neura-primary dark:text-neura-accent">soluciones SaaS personalizadas</strong> y 
-                aplicaciones web que <strong className="text-neura-primary dark:text-neura-accent">incrementan tus ventas hasta un 300%</strong> 
-                y automatizan procesos críticos para tu empresa.
+                Desarrollamos <strong className="text-neura-primary dark:text-neura-accent">aplicaciones y plataformas personalizadas</strong> que <strong className="text-neura-primary dark:text-neura-accent">convierten los procesos de tu empresa en pilares innovadores </strong> y <strong className="text-neura-primary dark:text-neura-accent">rentables</strong>. Nuestro enfoque se basa en la colaboración estrecha, la innovación constante y la entrega de resultados tangibles que impulsan el crecimiento de tu negocio.
               </p>
             </AnimatedSection>
 
@@ -71,10 +69,10 @@ const Hero = () => {
             <AnimatedSection direction="up" delay={0.6}>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {[
-                  'Desarrollo en tiempo récord',
-                  'ROI garantizado en 3 meses',
+                  'Desarrollo robusto',
+                  'Integraciones personalizadas',
                   'Soporte 24/7 incluido',
-                  'Escalabilidad ilimitada'
+                  'Escalabilidad garantizada'
                 ].map((item, index) => (
                   <motion.div
                     key={index}

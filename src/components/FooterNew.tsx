@@ -266,41 +266,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Newsletter Section */}
-        <motion.div 
-          className="py-8 border-t border-white/10"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <div className="grid items-center gap-8 md:grid-cols-2">
-            <div>
-              <h4 className="mb-2 text-xl font-bold text-neura-light">
-                🚀 Mantente al día con las últimas innovaciones
-              </h4>
-              <p className="text-gray-400">
-                Recibe insights exclusivos sobre tecnología, casos de éxito y tendencias del mercado.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <input
-                type="email"
-                placeholder="tu@empresa.com"
-                className="flex-1 px-4 py-3 text-white placeholder-gray-400 border rounded-lg bg-white/10 border-white/20 focus:outline-none focus:ring-2 focus:ring-neura-accent focus:border-transparent"
-              />
-              <motion.button
-                className="flex items-center justify-center px-6 py-3 font-semibold text-white transition-all duration-300 rounded-lg bg-neura-gradient hover:shadow-neura-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Suscribirse
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </footer>
   );

@@ -22,8 +22,8 @@ const Team = () => {
       image: juan,
       bio: 'Arquitecto de soluciones empresariales con 2+ años transformando visiones en realidades digitales. Especialista en arquitecturas escalables y desarrollo full-stack.',
       expertise: ['Arquitecto de Software', 'Desarrollador Full Stack', 'Gestión de Proyectos', 'Liderazgo Técnico', 'Tech Lead'],
-      achievements: ['30+ proyectos liderados'],
-      personality: 'Innovador incansable que encuentra soluciones donde otros ven problemas',
+      achievements: ['10+ proyectos liderados'],
+      personality: 'Visionario apasionado por la innovación y la excelencia técnica',
       social: {
         linkedin: 'https://linkedin.com/in/juan-pablo-a-a62719142',
         twitter: 'https://twitter.com/NeuraAdmt',
@@ -36,11 +36,11 @@ const Team = () => {
     {
       name: 'Luis Eduardo Niño',
       role: 'Software Engineer',
-      title: 'Desarrollador Apasionado',
+      title: 'Desarrollador Innovador',
       image: Luis,
       bio: 'Experto en Algoritmos y Estructuras de Datos con 2+ años creando soluciones eficientes y escalables. Apasionado por la innovación tecnológica y el desarrollo de software de alta calidad.',
-      expertise: ['DevOps & CI/CD', 'Cybersecurity', 'Desarrollo Backend'],
-      achievements: ['AWS Solutions Architect', '99.99% uptime record', 'Google Cloud Expert'],
+      expertise: ['DevOps & CI/CD', 'Cybersecurity', 'Desarrollo Backend', 'Cloud Computing', 'Automatización de Infraestructura'],
+      achievements: ['Implementación de pipelines CI/CD para 5+ proyectos', 'Optimización de procesos de desarrollo y despliegue'],
       personality: 'Pensador analítico con pasión por la eficiencia y la optimización',
       social: {
         linkedin: 'https://linkedin.com/in/LuisDev',

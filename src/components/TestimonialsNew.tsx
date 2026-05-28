@@ -105,10 +105,10 @@ const Testimonials = () => {
   ];
 
   const metrics = [
-    { icon: TrendingUp, label: "Crecimiento Promedio", value: "200%" },
-    { icon: DollarSign, label: "ROI Promedio", value: "150%" },
-    { icon: Clock, label: "Tiempo de Entrega", value: "4.5 meses" },
-    { icon: Shield, label: "Satisfacción Cliente", value: "98%" }
+    { icon: TrendingUp, label: "Crecimiento Promedio", value: "100%" },
+    { icon: DollarSign, label: "Productividad", value: "120%" },
+    { icon: Clock, label: "Efectividad", value: "99%" },
+    { icon: Shield, label: "Satisfacción", value: "100%" }
   ];
 
   const nextTestimonial = () => {
@@ -136,7 +136,7 @@ const Testimonials = () => {
           </h2>
           <p className="section-subtitle">
             Cada testimonio representa una historia de transformación real. 
-            Descubre cómo hemos ayudado a empresas como la tuya a alcanzar resultados extraordinarios.
+            Descubre cómo hemos ayudado a empresas a alcanzar resultados extraordinarios.
           </p>
         </AnimatedSection>
 
