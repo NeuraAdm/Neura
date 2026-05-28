@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify build output
+        run: |
+          if [ ! -d "docs" ]; then
+            echo "Error: docs directory does not exist"
+            exit 1
+          fi
+          echo "Build output verified successfully"
+          ls -la docs
+
+      - name: Configure Git user
+        run: |
+          git config user.name "Neura"
+          git config user.email "neura.admt@gmail.com"
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/NeuraAdm/Neura.git
+          npx gh-pages -d docs --no-history
